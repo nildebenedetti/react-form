@@ -11,7 +11,7 @@ function App() {
     </li>
   })
   return <div>
-    <ul>
+    <ul className="list-unstyled">
       {articleCardList}
     </ul>
   </div>
