@@ -21,11 +21,15 @@ function Form() {
         // creo oggetto articolo
         const newArticle = {
             title: titolo, // inserisco input form
-            body: corpo, // inserisco input form
-            id: crypto.randomUUID()
+            body: corpo, // inserisco input form)
         }
-        
-    }
+        //  chiamo la prop di App.jsx
+        onaddArticle(newArticle);
+
+        // svuoto campi
+        setTitolo('');
+        setCorpo('');
+    };
 
     // inserisco variabile di stato con stringa vuota per il titolo
     const [titolo, setTitolo] = useState('');
