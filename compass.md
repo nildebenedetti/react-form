@@ -5,7 +5,7 @@ Milestone 1
 
 Milestone 2
 4. crezione della form con campo titolo e testo - ok
-5. rendiamo il form un componente dinamico per inserire nuovo articolo
+5. rendiamo il form un componente dinamico per inserire nuovo articolo - ok
 6. submit: inserisce in una ul la lista degli articoli
 
 Bonus
