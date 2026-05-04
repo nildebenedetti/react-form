@@ -20,3 +20,5 @@ const articles = [
     body: 'Il Selenicereus grandiflorus è un cactus che fiorisce solo una volta all’anno e rigorosamente di notte. I suoi grandi fiori bianchi appassiscono prima del sorgere del sole, offrendo uno spettacolo rarissimo e profumatissimo.'
   }
 ];
+
+export default articles;
