@@ -1,6 +1,6 @@
 const articles = [
   {
-    title: 'Il mistero della violetta',
+    title: 'Il mistero della Violetta',
     body: 'Sapevi che le violette contengono ionone? Questo composto "addormenta" temporaneamente i recettori dell’olfatto: dopo il primo profumo, l’odore sembra svanire nel nulla, per poi riapparire magicamente pochi minuti dopo.'
   },
   {
