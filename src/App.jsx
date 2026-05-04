@@ -4,23 +4,24 @@ import initialArticles from "./data/articles";
 import Form from "./components/Form";
 
 function App() {
-  {/** trasformo array statico in uno stato */}
-  const [ articles, setArticles ] = useState(initialArticles); // attribuisdco valore iniziale di articles
+  {/** trasformo array statico in uno stato */ }
+  const [articles, setArticles] = useState(initialArticles); // attribuisdco valore iniziale di articles
 
-  {/** la mia funzione per aggiungere nuovo oggetto ad array 2 */}
+  {/** la mia funzione per aggiungere nuovo oggetto ad array 2 */ }
   const addArticle = (newArticle) => {
     const articleWithId = {
       ...newArticle,
-      id: crypto.randomUUID
+      id: crypto.randomUUID()
     }
+    {/** Aggiorno stat ocreando nuovo array */ }
+    setArticles([...articles, articleWithId]);
   };
 
-  {/** Aggiorno stat ocreando nuovo array */}
-  setArticles([articles, articleWithId]);
+
 
   {/** Generazione delle card da obj array di articles.js */ }
   const articleCardList = articles.map(article => { //mappo lo stato, non import fisso
-    return <li key={article.id || crypto.randomUUID()}> 
+    return <li key={article.id || crypto.randomUUID()}>
       <Card
         title={article.title}
         body={article.body}
@@ -32,7 +33,7 @@ function App() {
     <ul className="list-unstyled">
       {articleCardList}
     </ul>
-    <Form onAddArticle={addArticle}/>
+    <Form onAddArticle={addArticle} />
     {/** aggiungo un p per aiutarmi a loggare i valori che mi servono */}
     <p className="px-4"></p>
   </div>
