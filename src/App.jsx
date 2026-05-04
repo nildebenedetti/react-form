@@ -1,8 +1,8 @@
-
+import Card from "./components/Card";
 
 function App() {
-  return (
-    
-  );
+  return <div>
+    <Card/>
+  </div>
 }
 export default App;
