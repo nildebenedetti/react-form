@@ -24,7 +24,7 @@ function App() {
       <form>
         <div className="mb-3">
           <label htmlFor="articleTitle" className="form-label p-2">Aggiungi un nuovo articolo</label>
-          <input type="text"  value={titolo} className="form-control" id="articleTitle" aria-describedby="articleTitle" />
+          <input type="text" onChange={ e => { console.log('cambiamento') }} value={titolo} className="form-control" id="articleTitle" aria-describedby="articleTitle" />
           <div id="articleTitle" className="form-text">Inserisci il titolo del tuo articolo.</div>
         </div>
         <div className="form-floating">
