@@ -3,7 +3,9 @@ import articles from "./data/articles";
 
 function App() {
   return <div>
-    <Card/>
+    <Card 
+    title="guarda che titolo"
+    body="Guarda che body"/>
   </div>
 }
 export default App;
