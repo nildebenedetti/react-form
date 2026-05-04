@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Card from "./components/Card";
-import articles from "./data/articles";
+import initialArticles from "./data/articles";
 import Form from "./components/Form";
 
 function App() {
