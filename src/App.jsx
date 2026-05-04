@@ -7,7 +7,7 @@ function App() {
     // inserisco stringa vuota per il titolo
     const [ titolo, setTitolo] = useState('');
   
-
+  {/** Generazione delle card da obj array di articles.js */}
   const articleCardList = articles.map(article => {
     return <li key={crypto.randomUUID()}>
       <Card
@@ -17,9 +17,11 @@ function App() {
     </li>
   })
   return <div>
+      {/** la lista delle card valorizzate con i dati degli oggetti in articles.js */}
     <ul className="list-unstyled">
       {articleCardList}
     </ul>
+    {/** sezione della card contentent il form */}
     <div className="card p-2 m-4">
       <form>
         <div className="mb-3">
