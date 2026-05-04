@@ -7,6 +7,13 @@ function App() {
   {/** trasformo array statico in uno stato */}
   const [ articles, setArticles ] = useState(initialArticles); // attribuisdco valore iniziale di articles
 
+  {/** la mia funzione per aggiungere nuovo oggetto ad array 2 */}
+  const addArticle = (newArticle) => {
+    const articleWithId = {
+      ...newArticle,
+      id: crypto.randomUUID
+    }
+  }
   {/** Generazione delle card da obj array di articles.js */ }
   const articleCardList = articles.map(article => {
     return <li key={crypto.randomUUID()}>
