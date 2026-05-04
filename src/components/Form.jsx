@@ -1,18 +1,6 @@
 import { useState } from "react";
 
-function Form() {
-    // Funzione eventHandler: quando submit:
-    // crea un oggetto
-    // crea una updated article list e incodamelo li dentro
-    // cancella tutti i valori (con oggetto empty user?)
-    /*const createArticle = (event) => { // al verificarsi dell'evento
-        const target = event.target // identifico il target
-        const targetValue = target.value // salvo il valore inserito da utente
-        const targetName = target.name //salvo la proprieta'da aggiornare
-
-        if ( targetName === 'title') 
-
-    }*/
+function Form( {onAddArticle}) {
 
     // funzione per Submit
     const formSubmitHandler = ( e ) => {
@@ -24,7 +12,7 @@ function Form() {
             body: corpo, // inserisco input form)
         }
         //  chiamo la prop di App.jsx
-        onaddArticle(newArticle);
+        onAddArticle(newArticle);
 
         // svuoto campi
         setTitolo('');
@@ -38,7 +26,7 @@ function Form() {
     
 
     return <div className = "card p-2 m-4" >
-            <form>
+            <form onSubmit={formSubmitHandler}>
                 <div className="mb-3">
                     <label htmlFor="articleTitle" className="form-label p-2">Aggiungi un nuovo articolo</label>
                     <input type="text" onChange={e => { setTitolo(e.target.value) }} value={titolo} className="form-control" id="articleTitle" aria-describedby="articleTitle" />
@@ -49,7 +37,7 @@ function Form() {
                     <label htmlFor="floatingTextarea">Scrivi il tuo articolo...</label>
                 </div>
                 <div className="my-3">
-                    <button type="submit" onSubmit={formSubmitHandler} className="btn btn-primary">Aggiungi</button>
+                    <button type="submit" className="btn btn-primary">Aggiungi</button>
                 </div>
             </form>
     </div >
