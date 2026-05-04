@@ -1,5 +1,6 @@
 import Card from "./components/Card";
 import articles from "./data/articles";
+import Form from "./components/Form";
 
 function App() {
   const articleCardList = articles.map( article => {
@@ -14,6 +15,7 @@ function App() {
     <ul className="list-unstyled">
       {articleCardList}
     </ul>
+    <Form/>
   </div>
 }
 export default App;
