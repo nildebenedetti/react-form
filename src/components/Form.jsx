@@ -1,8 +1,5 @@
 import { useState } from "react";
 
-
-
-
 function Form() {
     // Funzione eventHandler: quando submit:
     // crea un oggetto
@@ -31,4 +28,4 @@ function Form() {
             </form>
     </div >
 }
-export default Form
+export default Form;
