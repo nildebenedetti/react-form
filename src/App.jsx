@@ -27,7 +27,7 @@ function App() {
   {/** Generazione delle card da obj array di articles.js */ }
   const articleCardList = articles.map(article => { //mappo lo stato, non import fisso
     const articleId = article.id;
-    return <li key={article.id || crypto.randomUUID()}>
+    return <li key={article.id}>
       <Card
         title={article.title}
         body={article.body}
