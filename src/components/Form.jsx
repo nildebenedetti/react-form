@@ -1,5 +1,11 @@
 import { useState } from "react";
 
+function setTitle {
+    // inserisco una funzione per settare il titolo
+    const [ title, setTitle] = useState('');
+}
+
+
 function Form() {
     return <div className="card p-2 m-4">
         <form>
