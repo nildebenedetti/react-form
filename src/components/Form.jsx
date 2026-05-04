@@ -24,14 +24,14 @@ function Form() {
             body: corpo, // inserisco input form
             id: crypto.randomUUID()
         }
+        
     }
 
     // inserisco variabile di stato con stringa vuota per il titolo
     const [titolo, setTitolo] = useState('');
     // inserisco variabile di stato con stringaa vuota per il corpo articolo
     const [corpo, setCorpo] = useState('');
-'
-    }
+    
 
     return <div className = "card p-2 m-4" >
             <form>
@@ -45,7 +45,7 @@ function Form() {
                     <label htmlFor="floatingTextarea">Scrivi il tuo articolo...</label>
                 </div>
                 <div className="my-3">
-                    <button type="submit" className="btn btn-primary">Aggiungi</button>
+                    <button type="submit" onSubmit={formSubmitHandler} className="btn btn-primary">Aggiungi</button>
                 </div>
             </form>
     </div >
