@@ -19,14 +19,6 @@ function Form({ onAddArticle }) {
         setCorpo('');
     };
 
-
-    // funzione clickhandler per eliminare articolo
-    const removeArticleById = (id) => {
-        // filter restituisce un nuovo array senza l'elemento da rimuovere
-        const filteredArticles = setArticles.filter(article => article.id !== id);
-        seArticle(filteredArticles);
-    };
-
     // inserisco variabile di stato con stringa vuota per il titolo
     const [titolo, setTitolo] = useState('');
     // inserisco variabile di stato con stringaa vuota per il corpo articolo
