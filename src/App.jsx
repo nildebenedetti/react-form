@@ -4,7 +4,8 @@ import initialArticles from "./data/articles";
 import Form from "./components/Form";
 
 function App() {
-
+  {/** trasformo array statico in uno stato */}
+  const [ articles, setArticles ] = useState(initialArticles); // attribuisdco valore iniziale di articles
 
   {/** Generazione delle card da obj array di articles.js */ }
   const articleCardList = articles.map(article => {
