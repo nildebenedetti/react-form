@@ -24,7 +24,6 @@ function Form({ onAddArticle }) {
     // inserisco variabile di stato con stringaa vuota per il corpo articolo
     const [corpo, setCorpo] = useState('');
 
-    /
 
 
     return <div className="card p-2 m-4" >
