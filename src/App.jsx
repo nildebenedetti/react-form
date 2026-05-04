@@ -2,10 +2,18 @@ import Card from "./components/Card";
 import articles from "./data/articles";
 
 function App() {
+  const articleCardList = articles.map( article => {
+    return <li key={crypto.randomUUID()}>
+      <Card
+      title={article.title}
+      body={article.body}
+      />
+    </li>
+  })
   return <div>
-    <Card 
-    title="guarda che titolo"
-    body="Guarda che body"/>
+    <ul>
+      {articleCardList}
+    </ul>
   </div>
 }
 export default App;
