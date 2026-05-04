@@ -13,10 +13,14 @@ function App() {
       ...newArticle,
       id: crypto.randomUUID
     }
-  }
+  };
+
+  {/** Aggiorno stat ocreando nuovo array */}
+  setArticles([articles, articleWithId]);
+
   {/** Generazione delle card da obj array di articles.js */ }
-  const articleCardList = articles.map(article => {
-    return <li key={crypto.randomUUID()}>
+  const articleCardList = articles.map(article => { //mappo lo stato, non import fisso
+    return <li key={article.id || crypto.randomUUID()}> 
       <Card
         title={article.title}
         body={article.body}
@@ -28,7 +32,7 @@ function App() {
     <ul className="list-unstyled">
       {articleCardList}
     </ul>
-    <Form />
+    <Form onAddArticle={addArticle}/>
     {/** aggiungo un p per aiutarmi a loggare i valori che mi servono */}
     <p className="px-4"></p>
   </div>
