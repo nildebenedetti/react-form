@@ -4,8 +4,10 @@ import articles from "./data/articles";
 import Form from "./components/Form";
 
 function App() {
-    // inserisco stringa vuota per il titolo
-    const [ titolo, setTitolo] = useState('');
+    // inserisco variabile di stato con stringa vuota per il titolo
+    const [ titolo, setTitolo ] = useState('');
+    // inserisco variabile di stato con stringaa vuota per il corpo articolo
+    const [ corpo, setCorpo ] = useState('');
   
   {/** Generazione delle card da obj array di articles.js */}
   const articleCardList = articles.map(article => {
@@ -30,7 +32,7 @@ function App() {
           <div id="articleTitle" className="form-text">Inserisci il titolo del tuo articolo.</div>
         </div>
         <div className="form-floating">
-          <textarea className="form-control" placeholder="Il tuo articolo" id="floatingTextarea"></textarea>
+          <textarea className="form-control" onChange={ e => { setCorpo(e.target.value) }} value={corpo}placeholder="Il tuo articolo" id="floatingTextarea"></textarea>
           <label htmlFor="floatingTextarea">Scrivi il tuo articolo...</label>
         </div>
         <div className="my-3">
@@ -38,6 +40,8 @@ function App() {
         </div>
       </form>
     </div>
+    {/** aggiungo un p per aiutarmi a loggare i valori che mi servono */}
+    <p className="px-4">PER LA SCIENZA DEL DEBUG <br></br> il valore di corpo: {corpo}</p>
   </div>
 }
 export default App;
