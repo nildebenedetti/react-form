@@ -1,16 +1,18 @@
 import { useState } from "react";
 
-function setTitle {
+
+
+
+function Form() {
+    function setTitle() {
     // inserisco una funzione per settare il titolo
     const [ title, setTitle] = useState('');
 }
 
-
-function Form() {
     return <div className="card p-2 m-4">
         <form>
             <div className="mb-3">
-                <label htmlFor="articleTitle" className="form-label p-2">Aggiungi un nuovo articolo</label>
+                <label value={title} htmlFor="articleTitle" className="form-label p-2">Aggiungi un nuovo articolo</label>
                 <input type="text" className="form-control" id="articleTitle" aria-describedby="articleTitle" />
                 <div id="articleTitle" className="form-text">Inserisci il titolo del tuo articolo.</div>
             </div>
