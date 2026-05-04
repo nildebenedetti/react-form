@@ -5,11 +5,33 @@ function Form() {
     // crea un oggetto
     // crea una updated article list e incodamelo li dentro
     // cancella tutti i valori (con oggetto empty user?)
+    /*const createArticle = (event) => { // al verificarsi dell'evento
+        const target = event.target // identifico il target
+        const targetValue = target.value // salvo il valore inserito da utente
+        const targetName = target.name //salvo la proprieta'da aggiornare
+
+        if ( targetName === 'title') 
+
+    }*/
+
+    // funzione per Submit
+    const formSubmitHandler = ( e ) => {
+        e.preventDefault();
+
+        // creo oggetto articolo
+        const newArticle = {
+            title: titolo, // inserisco input form
+            body: corpo, // inserisco input form
+            id: crypto.randomUUID()
+        }
+    }
 
     // inserisco variabile di stato con stringa vuota per il titolo
     const [titolo, setTitolo] = useState('');
     // inserisco variabile di stato con stringaa vuota per il corpo articolo
     const [corpo, setCorpo] = useState('');
+'
+    }
 
     return <div className = "card p-2 m-4" >
             <form>
